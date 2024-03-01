@@ -1,4 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
+import './App.css';
+import ExpenseList from './ExpenseList';
+import AddExpenseForm from './AddExpenseForm';
+import TotalExpenses from './TotalExpenses';
+
+function App() {
+  return (
+    <Provider store={store}>
+      <div className="container">
+        <h1>Expense Tracker&hearts;</h1>
+        <AddExpenseForm />
+        <ExpenseList />
+        <TotalExpenses />
+      </div>
+    </Provider>
+  );
+}
+
+export default App;
+
+
+
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,4 +47,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
